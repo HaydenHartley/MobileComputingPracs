@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">guessTheCeleb</string>
+
+    <string name="level_default">Level: ?</string>
+    <string name="play">PLAY!</string>
+    <string name="time_default">Time Remaining: 0 seconds</string>
+    <string name="score_default">Score: 0/10</string>
+
+    <string-array name="levels">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+        <item>Expert</item>
+    </string-array>
+
+
 </resources>
