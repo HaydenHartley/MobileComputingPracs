@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/game"
     tools:context=".GameFragment">
 
     <TextView
@@ -15,13 +16,13 @@
         android:gravity="center"
         android:text="@string/level_default"
         android:textSize="45sp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintBottom_toTopOf="@+id/difficulty"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/difficulty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:entries="@array/levels"
@@ -31,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/play"
         style="@style/TextAppearance.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,6 +41,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/difficulty" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

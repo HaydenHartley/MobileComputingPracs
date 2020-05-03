@@ -1,4 +1,4 @@
-package au.edu.jcu.cp3406.guesstheceleb;
+package au.edu.jcu.cp3406.guesstheceleb.game;
 
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -8,12 +8,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 
-class ImageManager {
+public class CelebrityManager {
     private String assetPath;
     private String[] imageNames;
     private AssetManager assetManager;
 
-    ImageManager(AssetManager asset_manager, String asset_path) {
+    public CelebrityManager(AssetManager asset_manager, String asset_path) {
         assetManager = asset_manager;
         assetPath = asset_path;
         try {
@@ -24,7 +24,7 @@ class ImageManager {
         }
     }
 
-    Bitmap get(int i) {
+    public Bitmap get(int i) {
         try {
             InputStream stream = assetManager.open(assetPath + "/" + imageNames[i]);
             return BitmapFactory.decodeStream(stream);
@@ -33,4 +33,19 @@ class ImageManager {
             return null;
         }
     }
+
+    public String getName(int i) {
+        /*String name;
+        if (imageNames[i].contains(".")) {
+            name = imageNames[i].substring(0, toString().lastIndexOf('.'));
+        } else {
+            name = imageNames[i];
+        }*/
+        return imageNames[i];
+    }
+
+    public int count() {
+        return imageNames.length;
+    }
+
 }
